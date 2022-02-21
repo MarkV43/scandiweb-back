@@ -1,0 +1,4 @@
+RewriteEngine on
+
+RewriteRule ^products/?$ product/collection.php [L]
+RewriteRule ^products/([0-9a-zA-Z]+)$ product/single.php?sku=$1 [L]

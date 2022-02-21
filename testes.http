@@ -1,0 +1,18 @@
+PUT http://localhost:80/products/TESTEE
+Content-Type: application/x-www-form-urlencoded
+
+name=Teste&price=10.00&type=2&specific=10
+
+###
+GET http://localhost:80/products/TR120555
+Accept: application/json
+
+###
+POST http://localhost:80/products
+Content-Type: application/x-www-form-urlencoded
+
+sku=TESTEE&name=Teste&price=10.00&type=2&specific=10
+
+###
+
+

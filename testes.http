@@ -14,5 +14,5 @@ Content-Type: application/x-www-form-urlencoded
 sku=TESTEE&name=Teste&price=10.00&type=2&specific=10
 
 ###
-
-
+DELETE https://scandiweb-back.000webhostapp.com/products/ABCD1234
+Content-Type: application/json

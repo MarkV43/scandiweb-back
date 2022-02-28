@@ -1,10 +1,10 @@
-PUT http://localhost:80/products/TESTEE
+PUT http://localhost:80/products/TESTEE?method=TESTE
 Content-Type: application/x-www-form-urlencoded
 
 name=Teste&price=10.00&type=2&specific=10
 
 ###
-GET http://localhost:80/products/TR120555
+GET http://localhost:80/products/?teste=tesssss
 Accept: application/json
 
 ###
@@ -14,5 +14,9 @@ Content-Type: application/x-www-form-urlencoded
 sku=TESTEE&name=Teste&price=10.00&type=2&specific=10
 
 ###
-DELETE https://scandiweb-back.000webhostapp.com/products/ABCD1234
+GET https://scandiweb-back.000webhostapp.com/products/SKUTest000?method=DELETE
+Content-Type: application/json
+
+###
+GET http://localhost:80/products/GGWP0007?method=DELETE
 Content-Type: application/json

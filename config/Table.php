@@ -80,6 +80,7 @@ abstract class Table {
                     http_response_code(503);
                     echo json_encode(array(
                         "message" => "Unable to create record.",
+                        "error" => $stmt->errorInfo(),
                     ));
                 }
             } else {
@@ -128,6 +129,7 @@ abstract class Table {
                     http_response_code(503);
                     echo json_encode(array(
                         "message" => "Unable to update record.",
+                        "error" => $stmt->errorInfo(),
                     ));
                 }
             } else {
@@ -161,6 +163,7 @@ abstract class Table {
                 http_response_code(503);
                 echo json_encode(array(
                     "message" => "Unable to delete record.",
+                    "error" => $stmt->errorInfo(),
                 ));
             }
         }
@@ -168,7 +171,7 @@ abstract class Table {
 
     function has_all_properties() {
         foreach ($this->properties as $key) {
-            if (!isset($this->{$key})) {
+            if (is_null($this->{$key})) {
                 return false;
             }
         }
@@ -176,8 +179,6 @@ abstract class Table {
     }
 
     function respond() {
-        $single = !is_null($this->{$this->primary_key});
-
         switch ($_SERVER['REQUEST_METHOD']) {
             case 'GET':
                 $this->get();

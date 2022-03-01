@@ -14,8 +14,10 @@ Content-Type: application/x-www-form-urlencoded
 sku=TESTEE&name=Teste&price=10.00&type=2&specific=10
 
 ###
-GET https://scandiweb-back.000webhostapp.com/products/SKUTest000?method=DELETE
-Content-Type: application/json
+POST https://scandiweb-back.000webhostapp.com/products/TESTEEE
+Content-Type: application/x-www-form-urlencoded
+
+sku=TESTEE&name=Teste&price=10&type=Weight&specific=10
 
 ###
 GET http://localhost:80/products/GGWP0007?method=DELETE
